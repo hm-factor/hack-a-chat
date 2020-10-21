@@ -4,7 +4,7 @@ module.exports = function(controller) {
     // do somethign using bot and message like...
     // await bot.reply(message,'You have returned!');
     await bot.reply(message,{
-      text: 'Here are some quick replies',
+      text: 'Welcome back! What would you like to know about a human being?',
       quick_replies: [
         {
           title: 'Academia',
