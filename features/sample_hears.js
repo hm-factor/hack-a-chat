@@ -22,12 +22,42 @@ module.exports = function(controller) {
     const academicRegex = /academ/gmi;
     const educationRegex = /educat/gmi;
 
+    const languagesRegex = /language/gmi;
+    const skillsRegex = /skill/gmi;
+    const techRegex = /tech/gmi;
+    const stackRegex = /stack/gmi;
+
+    const contactRegex = /contact/gmi;
+
+    const jobRegex = /job/gmi;
+    
+
     controller.hears([new RegExp(academicRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you fill find info about academic history.' });
+        await bot.reply(message,{ text: 'Here you find info about academic history.' });
     });
-
     controller.hears([new RegExp(educationRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you fill find info about academic history.' });
+        await bot.reply(message,{ text: 'Here you find info about academic history.' });
     });
 
-}
+    controller.hears([new RegExp(languagesRegex)], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{ text: 'Here you find info about the languages I am proficient in.' });
+    });
+    controller.hears([new RegExp(techRegex)], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{ text: 'Here you find info about the languages I am proficient in.' });
+    });
+    controller.hears([new RegExp(stackRegex)], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{ text: 'Here you find info about the languages I am proficient in.' });
+    });
+    controller.hears([new RegExp(skillsRegex)], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{ text: 'Here you find info about the languages I am proficient in.' });
+    });
+
+    controller.hears([new RegExp(contactRegex)], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{ text: 'Here you will find how to contact me.' });
+    });
+
+    controller.hears([new RegExp(jobRegex)], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{ text: 'Here you will find my job history.' });
+    });
+
+};
