@@ -30,7 +30,8 @@ module.exports = function(controller) {
     const contactRegex = /contact/gmi;
 
     const jobRegex = /job/gmi;
-    
+    const workRegex = /work/gmi;
+
 
     controller.hears([new RegExp(academicRegex)], ['message','direct_message'], async function(bot, message) {
         await bot.reply(message,{ text: 'Here you find info about academic history.' });
@@ -57,6 +58,9 @@ module.exports = function(controller) {
     });
 
     controller.hears([new RegExp(jobRegex)], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{ text: 'Here you will find my job history.' });
+    });
+    controller.hears([new RegExp(workRegex)], ['message','direct_message'], async function(bot, message) {
         await bot.reply(message,{ text: 'Here you will find my job history.' });
     });
 
