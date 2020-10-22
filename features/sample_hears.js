@@ -23,11 +23,11 @@ module.exports = function(controller) {
     const educationRegex = /educat/gmi;
 
     controller.hears([new RegExp(academicRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'i found the regex academic' });
+        await bot.reply(message,{ text: 'Here you fill find info about academic history.' });
     });
 
     controller.hears([new RegExp(educationRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'i found the regex education' });
+        await bot.reply(message,{ text: 'Here you fill find info about academic history.' });
     });
 
 }
