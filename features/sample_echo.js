@@ -14,15 +14,18 @@ module.exports = function(controller) {
     });
 
     controller.hears('academia', 'message', async(bot, message) => {
-      await bot.reply(message, 'shits dumb');
+      await bot.reply(message, 'Here you find info about academic history.');
     });
 
     controller.hears('skills', 'message', async(bot, message) => {
-      await bot.reply(message, 'many languages and frameworks that you look for in your servants');
+      await bot.reply(message, 'Here you find info about the languages I am proficient in.');
     });
 
     controller.hears('work experience', 'message', async(bot, message) => {
-      await bot.reply(message, 'tutoring i guess');
+      await bot.reply(message, 'Here you will find my job history.');
     });
 
+    controller.hears('contact', 'message', async(bot, message) => {
+      await bot.reply(message, 'Here you will find how to contact me.')
+    });
 }
